@@ -44,6 +44,33 @@ The system integrates three core components:
   - Generates structured reports (customer summary, risk explanation, and business recommendations)
 - Demonstrated the full workflow on real use cases covering True Positive, False Positive, True Negative, and False Negative scenarios.
 
+## Architecture
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/33489d5e-691d-45b1-bb46-919d872b5da5" alt="Architecture Overview" width="639">
+</p>
+<p align="center"><em>Data Pipeline</em></p>
+
+<br>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c23f3fb8-34df-41cb-ae61-ddf923fcd057" alt="Architecture Detail" width="631">
+</p>
+<p align="center"><em>System Architecture</em></p>
+
+<br>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/884262e6-2b5e-4a5f-89e6-4b9f9e8267b6" alt="Architecture Component" width="524">
+</p>
+<p align="center"><em>Agentic Workflow inspired by ReAct Framework</em></p>
+
+---
+
+## Demo
+
+<img width="650" height="619" alt="image" src="https://github.com/user-attachments/assets/def9ba8c-b6b4-446e-9a12-7b4c45c6e1a5" />
+
 ---
 
 ## 💡 Main Contributions
