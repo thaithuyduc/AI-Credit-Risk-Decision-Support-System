@@ -1,0 +1,7 @@
+.env
+test.ipynb
+pgadmin/
+postgres/
+qdrant/
+data/
+.vscode/

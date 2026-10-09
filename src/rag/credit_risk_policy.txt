@@ -1,0 +1,129 @@
+**1. Common risks when taking unsecured loans**
+Cash loans without collateral are a form of lending that many users are interested in on the market. However, not everyone truly understands this type of loan, especially the potential risks involved, as they can affect the borrower’s personal finances at any time.
+
+**1.1 Definition of unsecured lending**
+Unsecured lending is a form of loan that does not require the customer to provide collateral or mortgaged assets. Instead, the application is assessed based on the customer’s credibility, credit history, and repayment ability.
+Depending on the level of credibility, the customer will be approved for different loan limits and loan terms. Depending on the specific regulations of the credit institution or bank, the loan limit can range from a few million to several hundred million VND. At Home Credit, the term for cash loans without collateral can flexibly range from 3 to 57 months with limits from 3 to 250 million VND.
+
+**1.2 Common risks when taking unsecured loans**
+In addition to the advantages mentioned above, unsecured cash loans also involve many risks, typically including:
+- **Credit score reduction**: Without a proper financial plan, customers can easily fall into late payment situations, which negatively affects their credit score. In that case, customers must bear additional penalty fees and overdue interest. Worse still, it will become very difficult for them to obtain other unsecured loan packages in the future.
+- **Legal risks**: This is one of the fairly common issues for many customers if they do not clearly understand the terms and conditions in the contract. In cases where the borrower is overdue for a long time and is unable to repay, they will be held liable under the contract for failing to repay the loan on time.
+- **Other risks**: Some other issues when borrowing from less reputable unsecured lending companies include: traps of agreeing to co-sign loans, suddenly high interest rates, expensive costs accompanied by many unclear additional fees, etc.
+
+**2. Regulations on Interest Rates and Overdue Penalty Fees**
+**For Cash Loans**: Interest on overdue principal is calculated at 150% of the contractual interest rate. In addition, late payment interest calculated on the unpaid interest portion shall not exceed 10% per year.
+**For Credit Cards**: Customers have a maximum of 45 interest-free days for shopping transactions. Customers need to pay the total amount due within 15 days after the statement closing date. If the outstanding balance is not paid in full, the late payment penalty fee is 0.12% per day calculated on the unpaid minimum payment amount. This penalty fee is a minimum of 150,000 VND and a maximum of 1,000,000 VND. An overdue credit card will lose the interest-free privilege and be subject to high interest rates on the entire outstanding balance.
+
+**3. Debt Classification Standards and CIC Recording**
+- **Group 1 Debt (Standard Debt)**: Loans overdue for less than 10 days still belong to Group 1. This situation has almost no impact on future borrowing ability if handled promptly.
+- **Group 2 Debt (Special Mention Debt)**: Loans overdue from 10 to 90 days will be moved to Group 2. This status is recorded on the CIC system as a warning signal but is not yet considered bad debt.
+- **Group 3, 4, 5 Debt (Bad Debt)**: Debts overdue for 91 days or more officially become bad debt. This negative bad debt information will be stored on the CIC system for a maximum of 5 years from the end of the loan, seriously affecting the ability to get new loans approved. If a customer has previously had debts in groups 3–5, the probability of new loan approval at Home Credit will be significantly affected.
+
+**4. Debt Reminder and Payment Process**
+- **Payment recommendation**: To avoid delays due to objective reasons from the banking system or collection partners, customers should pay the loan at least 3 working days before the due date.
+- **System update**: Normally, the payment will be updated on Home Credit’s system within 24 hours. Customers should keep the payment receipt for verification if needed.
+- **Pre-due date reminders**: Home Credit usually sends reminder messages within 5–7 days before the Payment Due Date so that customers do not forget their repayment obligation.
+- **Reminders after payment has been made**: If the customer pays within 24 hours (excluding weekends and holidays), the money may not yet have reached Home Credit, resulting in the system still making reminder calls.
+- **Payment authorization**: The borrower can ask relatives or friends to make the monthly installment payment on their behalf. However, in case of any errors, the person whose name is on the contract remains directly responsible for the payment obligations.
+- **Loan extension**: Customers facing difficulties can contact Home Credit to request consideration for restructuring the repayment term, depending on the loan status and applicable policies.
+
+**5. “Hardship Support” Policy (Hardship Policy)**
+This is a very important policy of Home Credit for customers who are unable to pay the full outstanding balance but still show goodwill in repaying. Your RAG system can use this rule to generate a handling workflow instead of only assessing risk:
+- **Eligibility conditions**: The customer has a loan contract (cash, motorbike, or home appliances) that is currently overdue, is experiencing genuine financial difficulties, and proactively requests consideration for interest or fee waiver/reduction.
+- **Handling directions**:
+  - If the customer commits to paying the entire overdue principal on time (and a portion of the principal of subsequent installments), the system will propose allowing the submission of a Request for Interest and Fee Waiver/Reduction.
+  - **Support level**: Home Credit may consider waiving or reducing part or all of the loan interest, late payment interest, and overdue fees depending on the assessment of financial capacity.
+  - After this policy is approved, the customer’s debt group is still classified according to the regulations of the State Bank of Vietnam (it may fall into Group 3).
+
+**6. Debt Restructuring Policy (Loan Extension)**
+- **Regulation**: Customers facing difficulties may request restructuring of the repayment term to reduce monthly financial pressure.
+- **Approval criteria (Decision Rules)**: The system will only propose approval of an extension if the customer satisfies the evaluation conditions based on: (1) Current loan status, (2) Credit history, (3) Reasonable reason for difficulty, and (4) Internal policy at the time of the request.
+- **Conversion to flexible installment repayment**: For credit cards, if the full outstanding balance cannot be paid at once, the system prioritizes recommending that the customer use the “flexible installment” service (splitting the amount into smaller payments over a longer period) to avoid late payment penalty fees.
+
+**7. Short-term Late Payment Penalty Regulations**
+- **1–2 days late**: Although loans overdue for less than 10 days (Group 1 debt) are not yet recorded as bad debt on the CIC system, the customer still has to bear late payment fees and penalty interest according to the contract from the first day of delay. The penalty interest rate can be up to 150% on the overdue principal balance.
+- **Handling direction**: If the model predicts that the customer is at risk of short-term delay (for example, due to objective reasons such as payment via a collection partner on a weekend/holiday getting stuck), the system issues a “Low/Medium Risk” warning but automatically requires sending an SMS payment reminder 1–2 days in advance.
+
+**8. Standard Operating Procedure (SOP)**
+If the system identifies a loan that has started to become overdue, the AI Agent can propose that the Collection Officer carry out the following 4 standardized steps:
+- **Step 1**: Extract and accurately verify the outstanding amount and number of days overdue from the system.
+- **Step 2**: Contact the customer and request priority payment of the due amount as soon as possible.
+- **Step 3**: Recheck the update status on the system within 24 hours after the customer reports having paid.
+- **Step 4**: If the customer reports inability to pay in full, the officer is allowed to switch to a negotiation scenario (collecting according to current ability) and guide the customer to send a Hardship Support Request to the email hchotro@homecredit.vn.
+
+**9. Cross-Risk Warning Recommendation**
+- When a customer reports financial difficulties, the RAG system needs to generate a warning paragraph for the credit officer to advise the customer: Absolutely do not take high-interest loans (black credit), borrow from one place to pay another, or believe in services that claim to “help clear bad debt on CIC.” Taking new loans to pay old ones will cause the DTI (Debt-to-Income) ratio to surge sharply, leading to “High Risk” that cannot be salvaged.
+
+**10. What is a cash loan contract?**
+According to Article 463 of the 2015 Civil Code, a money loan contract is a type of contract based on an agreement between the parties. Under this contract, the lender provides a certain amount of money to the borrower, and the borrower is responsible for paying interest to the lender if the two parties have agreed on it or if it is prescribed by law.
+
+**11. Latest regulations on cash loan contracts**
+**11.1. Interest rate in the loan contract must not exceed 20%/year**
+The borrower and the lender will have their own agreements regarding the terms of the contract, including the interest rate that the borrower must pay periodically, specifically:
+- **Interest rate limit under the 2015 Civil Code**: According to Article 468 of the 2015 Civil Code, the lending interest rate must not exceed 20% per year of the loan amount. If the interest rate exceeds the permitted level, the excess interest rate shall be invalid.
+- **Note for credit institutions under Circular 39/2016/TT-NHNN**: The lending interest rates of these organizations are determined according to market supply and demand agreements and are not subject to the 20% ceiling applicable to civil loans (except for certain priority sectors).
+- **Cases where the contract does not clearly state the interest rate**: When a dispute arises, the interest rate shall be calculated at 50% of the 20%/year limit, equivalent to 10%/year for the loan interest rate.
+**Example**: In January 2026, Mr. A lends Mr. B 100 million VND for business purposes. The two parties draw up a handwritten agreement (contract) stating clearly:
+- Amount: 100 million VND
+- Term: 6 months
+- Note: “Mr. B is responsible for paying monthly interest to Mr. A” (but without specifying the exact percentage per month or per year).
+
+When the debt is due, Mr. B only wants to repay the principal. In this case, the regulations will be applied as follows:
+- Confirmation of interest agreement: The handwritten document contains the phrase “is responsible for paying interest.” (Sufficient to apply Article 468)
+- Confirmation of unclear interest rate: There is no specific percentage figure in the handwritten document.
+- Application of the formula:
+  - The statutory interest rate ceiling is 20%/year
+  - Applicable interest rate = 50% × 20% = 10%/year
+  - Interest amount B must pay: 100 million × 10% × 6/12 = 5 million VND.
+
+**11.2. Penalties for exceeding the prescribed interest rate**
+Lending at an interest rate exceeding the prescribed limit may result in the lender being subject to administrative sanctions or criminal liability:
+- **Administrative sanctions**: If the interest rate exceeds 150% of the basic interest rate prescribed by the State Bank of Vietnam, a fine ranging from 5 to 15 million VND will be imposed.
+- **Criminal liability**: If the lending rate is five times higher than the limit, the person may be subject to non-custodial reform of up to 3 years.
+The penalties for lending at interest rates exceeding the prescribed limit are very severe. Therefore, both the borrower and the lender must properly fulfill their obligations regarding interest rates.
+
+**12. Important terms in a cash loan contract**
+Whether it is an individual or a corporate loan, the loan contract still needs to agree on matters related to the loan amount, interest rate, loan term, and disbursement method. Specifically, the contract must clearly state the following contents:
+
+- Information about the subject of the contract, rights and obligations of the parties.
+- Quantity and quality of the loan assets (for individual loans).
+- Loan amount and purpose.
+- Interest rate and payment method.
+- Place, term, and method of performing the money loan contract.
+- Measures to secure the loan contract.
+- Liability in case of contract breach and methods for resolving disputes when they arise.
+
+**13. Issues to note when making a cash loan contract**
+**13.1 Distorted forms of loan contracts**
+During the lending process, cases may arise where the borrower is late in repayment or is unable to repay the debt. At that time, some private lenders often require the borrower to sign additional debts related to the mortgage of land, vehicles, or houses to offset the previous debt.
+These distorted forms not only put the borrower in a legally disadvantageous position but may also lead to the risk of unintended asset loss. Therefore, borrowers need to carefully consider before signing any documents outside the official loan contract.
+
+**13.2 Issue of joint liability**
+When borrowing under the name of a married couple, the borrower needs to pay attention to joint liability. Specifically, the borrower must determine who (the husband or the wife) is the representative borrower and signs the contract. At the same time, to avoid arising issues, the loan contract also needs to clearly state the borrowing party and the joint liability.
+
+**13.3 Clearly understand the information and terms in the contract**
+Before signing any money loan contract, you should carefully read the content and terms in the contract to manage the loan contract and avoid problems arising later. At the same time, the signature used to sign the contract also needs to be consistent to avoid discrepancies in signatures on documents that require confirmation.
+
+**14. Home Credit’s cash loan package**
+Home Credit’s consumer loan package is a suitable choice for those who need to borrow cash to meet personal spending needs. The biggest advantage of this loan package is that it is completely unsecured, requiring no income proof or collateral.
+
+Conditions for registering for Home Credit’s cash loan package are as follows:
+- Be a Vietnamese citizen aged from 20 to 60 years old.
+- Provide all necessary documents, including: Citizen Identity Card/ID card, salary statement (for high-limit loans).
+
+After preparing the necessary documents, customers can register for a loan directly at the transaction counter or register online via the website and mobile app. Home Credit’s cash loan package currently offers extremely preferential interest rates starting from only 0.75%/month, with a loan limit of up to 250 million VND per contract. Especially, the loan will be approved rapidly within just 3 minutes and disbursed within 10 minutes — register for a loan now!
+
+**15. Some frequently asked questions about the latest regulations on cash loan contracts**
+**15.1. Have the regulations on late payment interest rates in cash loan contracts changed?**
+
+No, the regulations on late payment interest rates in cash loan contracts have not changed, specifically:
+- Late interest on interest on principal debt: 10%/year calculated on the outstanding late interest balance.
+- Interest on overdue principal debt: equal to 150% of the contractual loan interest rate.
+
+**15.2. Does a handwritten money loan contract have legal value?**
+Yes. A handwritten cash loan contract still has legal value if it meets all the conditions: the parties act completely voluntarily, and the content does not violate the law or social ethics.
+
+**15.3. Does a loan contract need to be notarized?**
+Current law does not mandatorily require notarization of cash loan contracts between individuals. However, notarization or authentication is recommended because it helps increase the evidentiary value in court, limits the risk of disputes, and protects the rights of both parties.
+A cash loan contract plays an important role in binding obligations and ensuring the rights of the related parties. Therefore, both the borrower and the lender need to have an understanding of the legal regulations in establishing and performing loan contracts. If you are looking for a reputable unsecured loan package with fast disbursement, do not miss Home Credit’s products!

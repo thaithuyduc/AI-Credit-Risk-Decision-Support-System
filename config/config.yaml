@@ -1,0 +1,9 @@
+# ======================
+# Đường dẫn dữ liệu
+# ======================
+
+paths:
+  raw_data: "data/raw"
+  processed_data: "data/processed"
+  models: "models"
+  reports: "reports"

@@ -1,0 +1,87 @@
+services:
+  postgres_credit_risk:
+    image: postgres:17
+    container_name: postgres_credit_risk
+    hostname: postgres_credit_risk
+    # restart: unless-stopped          # ← Recommended
+    # user: "1000:1500"
+    user: 'root'
+
+    environment:
+      - POSTGRES_DB=credit_risk
+      - POSTGRES_USER=thaithuyduc
+      - POSTGRES_PASSWORD=Duc12345    
+
+    ports:
+      - "5400:5432"
+
+    volumes:
+      - ./postgres/postgres_data:/var/lib/postgresql/data
+
+    networks:
+      credit_risk_network:
+        ipv4_address: 172.28.0.3
+
+  pgadmin_credit_risk:
+    image: dpage/pgadmin4:9.14
+    container_name: pgadmin_credit_risk
+    hostname: pgadmin_credit_risk
+    # restart: unless-stopped          # ← Recommended
+    # user: "1000:1500"
+    user: 'root'
+
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=thuyducthai@gmail.com
+      - PGADMIN_DEFAULT_PASSWORD=Duc12345
+      - PGADMIN_CONFIG_MASTER_PASSWORD_REQUIRED=False # if "true", pgAdmin will prompt for a master password on first login. Setting to "false" simplifies access but is less secure.
+
+    ports:
+      - "1010:80"
+
+    volumes:
+      - ./pgadmin/pgadmin_data:/var/lib/pgadmin
+
+    depends_on:
+      - postgres_credit_risk
+      # depends_on means: Start the pgadmin_agent_rag container only after the postgres_agent_rag container has been run. 
+      # However, it does NOT guarantee that the PostgreSQL server inside the postgres_agent_rag container is fully ready to accept connections. 
+      # In practice, you might still need to wait a few seconds after the postgres_agent_rag container starts before pgAdmin can connect to it successfully.
+    
+    networks:
+      credit_risk_network:
+        ipv4_address: 172.28.0.4
+  
+  qdrant_agent_rag:
+    image: qdrant/qdrant:v1.17       # Use :latest or :v1.x.x for stability. Avoid :dev unless you need bleeding edge
+    container_name: qdrant_credit_risk
+    hostname: qdrant_credit_risk
+    # restart: unless-stopped              # Good practice
+    # user: "1000:1500"                    # Better to use numeric UID:GID instead of username (optional but safer)
+    # user: root always has UID:GID = 0:0, but it's better to avoid running as root for security reasons
+    user: 'root'
+    
+    environment:
+      - QDRANT__SERVICE__GRPC_PORT=6334
+      # Add API key if you want security (recommended in production)
+      # - QDRANT__SERVICE__API_KEY=b324683218ca15b8da14bdcc9a7cc07b54f49ceea263819000d53cef34bdc76a
+      # we can also set a read-only key: - QDRANT__SERVICE__READ_ONLY_API_KEY=read_only_key_here
+
+    volumes:
+      - ./qdrant/qdrant_storage:/qdrant/storage    # ← Most important: persistent storage
+      # Optional: if you want to mount custom config
+      # - ./qdrant/qdrant_config:/qdrant/config
+
+    ports:
+      - "6333:6333"   # REST + Web UI (Dashboard)
+      - "6334:6334"   # gRPC (used by most LangChain / Python clients)
+
+    networks:
+      credit_risk_network:
+        ipv4_address: 172.28.0.5
+
+networks:
+  credit_risk_network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.28.0.0/24
