@@ -377,7 +377,7 @@ class CreditRiskAgent:
 
     def synthesizer_node(self, state: AgentState):
         '''
-        Read information from customer_summary, customer_credit_risk_explaination, and information from history messagges (include: previous AI messages, Tool messages)
+        Read information from customer_summary, customer_credit_risk_explaination, and information from history messagges (include: previous AI messages, Human messages)
         Then decide whether the information from RAG is sufficient to generate a final recommendation for the customer. 
         If sufficient, generate a final recommendation; 
         if not, request more information or clarification by specifying what additional information is needed and why.
